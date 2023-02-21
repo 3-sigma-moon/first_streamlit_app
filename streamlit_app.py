@@ -24,6 +24,6 @@ streamlit.text('-> 🥑🍞 Hard-Boiled Free-Range Egg')
 
 
 streamlit.header("----------Recieved chq")
-pd.read_excel("cheques.xlsx")
+pd.read_excel("./cheques.xlsx")
 
  

@@ -21,8 +21,10 @@ fruits_list = pd.read_table("https://uni-lab-files.s3.us-west-2.amazonaws.com/da
 
 streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 
-streamlit.multiselect("SELECT SOME FRUITS", list(fruits_list.index))
-streamlit.dataframe(fruits_list)
+selection = streamlit.multiselect("SELECT SOME FRUITS:", list(fruits_list.index))
+fruits_to_show = fruits_list.loc[selection]
+
+streamlit.dataframe(fruits_to_show )
 
 
 

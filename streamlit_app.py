@@ -12,8 +12,6 @@ streamlit.text("-> Loaded avocado toast")
 streamlit.text("-> Yogurt and fruit parfaits")
 streamlit.text("-> Broccoli and cheese egg bake")
 
-streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
-
 streamlit.header('------ Favorite Breakfast Menu')
 
 streamlit.text('-> 🥣 Omega 3 & Blueberry Oatmeal')
@@ -21,8 +19,9 @@ streamlit.text('-> 🐔 Kale, Spinach & Rocket Smoothie')
 streamlit.text('-> 🥑🍞 Hard-Boiled Free-Range Egg')
 fruits_list = pd.read_table("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt",sep=",",index_col="Fruit")
 
-streamlit.multiselect("SELECT SOME FRUITS", list(fruits_list.index))
+streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 
+streamlit.multiselect("SELECT SOME FRUITS", list(fruits_list.index))
 streamlit.dataframe(fruits_list)
 
 

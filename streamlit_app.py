@@ -20,12 +20,13 @@ streamlit.text('-> 🥣 Omega 3 & Blueberry Oatmeal')
 streamlit.text('-> 🐔 Kale, Spinach & Rocket Smoothie')
 streamlit.text('-> 🥑🍞 Hard-Boiled Free-Range Egg')
 
+streamlit.dataframe(pd.read_table("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt"))
 
 
 
 
 streamlit.header("----------Recieved chq")
-chq = pd.read_csv("./cheque.csv")
+chq = pd.read_csv("./cheque.csv",sep=";")
 streamlit.dataframe(chq)
 
  

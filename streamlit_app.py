@@ -26,6 +26,6 @@ streamlit.text('-> 🥑🍞 Hard-Boiled Free-Range Egg')
 
 streamlit.header("----------Recieved chq")
 chq = pd.read_csv("./cheque.csv")
-streamlit.text(chq)
+streamlit.dataframe(chq)
 
  
